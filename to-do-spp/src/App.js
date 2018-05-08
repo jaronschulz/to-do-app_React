@@ -27,7 +27,9 @@ class App extends Component {
 
   handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      return;
+      const notesArr = this.state.notes;
+      notesArr.push(this.state.noteText);
+      this.setState({ noteText: '' });
     }
   }
 
